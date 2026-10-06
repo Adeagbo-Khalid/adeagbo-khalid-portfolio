@@ -1,11 +1,56 @@
-@import 'tailwindcss';
-
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+﻿@import "tailwindcss";
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --color-ink: #05070D;
+    --color-surface: #0B0F1A;
+    --color-border: #1E2536;
+    --color-text: #E8ECF4;
+    --color-muted: #8B93A7;
+    --color-blue: #3B82F6;
+    --color-blue-soft: #60A5FA;
+    --color-orange: #F97316;
+    --color-orange-soft: #FB923C;
+
+    --font-display: "Space Grotesk", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+}
+
+body {
+    background-color: var(--color-ink);
+    color: var(--color-text);
+    font-family: var(--font-body);
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glow-blue {
+    box-shadow: 0 0 40px -10px rgba(59, 130, 246, 0.4);
+}
+
+.glow-orange {
+    box-shadow: 0 0 40px -10px rgba(249, 115, 22, 0.4);
+}
+
+@keyframes float-slow {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(30px, -40px); }
+}
+
+@keyframes float-slower {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-40px, 30px); }
+}
+
+.blob-1 {
+    animation: float-slow 18s ease-in-out infinite;
+}
+
+.blob-2 {
+    animation: float-slower 22s ease-in-out infinite;
 }
