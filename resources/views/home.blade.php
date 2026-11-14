@@ -56,9 +56,9 @@
         ];
 
         $creative = [
-            ['name' => 'CapCut', 'icon' => 'capcut'],
+            ['name' => 'CapCut', 'icon' => null],
             ['name' => 'Figma', 'icon' => 'figma'],
-            ['name' => 'Canva', 'icon' => 'canva'],
+            ['name' => 'Canva', 'icon' => null],
         ];
 
         $services = [
@@ -180,7 +180,11 @@
                 @foreach ($creative as $tool)
                     <div class="glass rounded-xl p-5 flex flex-col items-center gap-3 text-center hover:-translate-y-1 hover:glow-orange transition">
                         <div class="w-10 h-10 flex items-center justify-center">
-                            <img src="https://cdn.simpleicons.org/{{ $tool['icon'] }}/F97316" alt="{{ $tool['name'] }}" class="max-w-full max-h-full">
+                            @if ($tool['icon'])
+                                <img src="https://cdn.simpleicons.org/{{ $tool['icon'] }}/F97316" alt="{{ $tool['name'] }}" class="max-w-full max-h-full">
+                            @else
+                                <span class="font-display font-bold text-lg text-orange">{{ substr($tool['name'], 0, 2) }}</span>
+                            @endif
                         </div>
                         <span class="text-sm font-medium text-text">{{ $tool['name'] }}</span>
                     </div>
