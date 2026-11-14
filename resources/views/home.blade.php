@@ -54,6 +54,16 @@
             ['name' => 'Git & GitHub', 'icon' => 'git'],
             ['name' => 'Livewire', 'icon' => 'livewire'],
         ];
+
+        $services = [
+            ['title' => 'Full-Stack Laravel Development', 'desc' => 'End-to-end web applications built on Laravel and PHP.'],
+            ['title' => 'Web3 Integration', 'desc' => 'Building tools and platforms for DAO and Web3 ecosystems.'],
+            ['title' => 'AI-Powered Tools', 'desc' => 'Integrating AI APIs into practical, everyday tools.'],
+            ['title' => 'Custom Portfolio Sites', 'desc' => 'Personal and client portfolio builds with modern design.'],
+            ['title' => 'Video Creation', 'desc' => 'Creating videos that attract customers and grow audiences.'],
+            ['title' => 'Graphic Design', 'desc' => 'Designing visuals for brands, projects, and social media.'],
+            ['title' => 'Educational Tutoring', 'desc' => 'Tutoring students with educational technology tools that make learning easier to understand.'],
+        ];
     @endphp
 
     {{-- HERO --}}
@@ -283,25 +293,12 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
-                <div class="glass rounded-xl p-6 hover:-translate-y-1 hover:glow-blue transition">
-                    <h3 class="font-display font-semibold mb-2">Full-Stack Laravel Development</h3>
-                    <p class="text-muted text-sm leading-relaxed">End-to-end web applications built on Laravel and PHP.</p>
-                </div>
-
-                <div class="glass rounded-xl p-6 hover:-translate-y-1 hover:glow-blue transition">
-                    <h3 class="font-display font-semibold mb-2">Web3 Integration</h3>
-                    <p class="text-muted text-sm leading-relaxed">Building tools and platforms for DAO and Web3 ecosystems.</p>
-                </div>
-
-                <div class="glass rounded-xl p-6 hover:-translate-y-1 hover:glow-blue transition">
-                    <h3 class="font-display font-semibold mb-2">AI-Powered Tools</h3>
-                    <p class="text-muted text-sm leading-relaxed">Integrating AI APIs into practical, everyday tools.</p>
-                </div>
-
-                <div class="glass rounded-xl p-6 hover:-translate-y-1 hover:glow-blue transition">
-                    <h3 class="font-display font-semibold mb-2">Custom Portfolio Sites</h3>
-                    <p class="text-muted text-sm leading-relaxed">Personal and client portfolio builds with modern design.</p>
-                </div>
+                @foreach ($services as $service)
+                    <div class="glass rounded-xl p-6 hover:-translate-y-1 hover:glow-blue transition">
+                        <h3 class="font-display font-semibold mb-2">{{ $service['title'] }}</h3>
+                        <p class="text-muted text-sm leading-relaxed">{{ $service['desc'] }}</p>
+                    </div>
+                @endforeach
 
             </div>
 
