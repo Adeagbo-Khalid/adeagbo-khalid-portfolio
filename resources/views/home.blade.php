@@ -328,15 +328,23 @@
             <p class="text-sm font-medium text-orange-soft tracking-wide mb-3">Contact</p>
             <h2 class="font-display font-bold text-3xl md:text-4xl mb-6">Get In Touch</h2>
 
-            <p class="text-muted mb-10">Have a project in mind, or just want to connect? Send me an email and I'll get back to you.</p>
+            <p class="text-muted mb-10">Have a project in mind, or just want to connect? Message me on WhatsApp for the fastest reply, or send an email.</p>
 
             <div class="glass rounded-2xl p-8 mb-8">
-                <p class="text-xs font-mono text-muted mb-2">Email</p>
-                <a href="mailto:adeagboadedolapo121@gmail.com" class="block text-lg md:text-xl font-medium text-text hover:text-orange transition break-all mb-6">
-                    adeagboadedolapo121@gmail.com
+                <p class="text-xs font-mono text-muted mb-2">WhatsApp</p>
+                <p class="text-lg md:text-xl font-medium text-text mb-6">+234 915 950 4236</p>
+                <a href="https://wa.me/2349159504236?text=Hi%20Khalid%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" class="inline-block px-7 py-3.5 bg-gradient-to-r from-blue to-orange text-white font-semibold rounded-full hover:opacity-90 transition glow-blue">
+                    Chat on WhatsApp
                 </a>
-                <a href="mailto:adeagboadedolapo121@gmail.com" class="inline-block px-7 py-3.5 bg-gradient-to-r from-blue to-orange text-white font-semibold rounded-full hover:opacity-90 transition">
-                    Email Me
+            </div>
+
+            <div class="glass rounded-2xl p-6 mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div>
+                    <p class="text-xs font-mono text-muted mb-1">Email</p>
+                    <p class="text-text break-all">adeagboadedolapo121@gmail.com</p>
+                </div>
+                <a href="mailto:adeagboadedolapo121@gmail.com" class="inline-block px-6 py-3 glass text-text font-semibold rounded-full hover:border-orange/50 transition text-center">
+                    Send Email
                 </a>
             </div>
 
