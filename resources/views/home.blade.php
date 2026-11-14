@@ -55,6 +55,12 @@
             ['name' => 'Livewire', 'icon' => 'livewire'],
         ];
 
+        $creative = [
+            ['name' => 'CapCut', 'icon' => 'capcut'],
+            ['name' => 'Figma', 'icon' => 'figma'],
+            ['name' => 'Canva', 'icon' => 'canva'],
+        ];
+
         $services = [
             ['title' => 'Full-Stack Laravel Development', 'desc' => 'End-to-end web applications built on Laravel and PHP.'],
             ['title' => 'Web3 Integration', 'desc' => 'Building tools and platforms for DAO and Web3 ecosystems.'],
@@ -171,6 +177,14 @@
 
             <p class="text-sm font-medium text-orange-soft tracking-wide mt-14 mb-6">Creative</p>
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                @foreach ($creative as $tool)
+                    <div class="glass rounded-xl p-5 flex flex-col items-center gap-3 text-center hover:-translate-y-1 hover:glow-orange transition">
+                        <div class="w-10 h-10 flex items-center justify-center">
+                            <img src="https://cdn.simpleicons.org/{{ $tool['icon'] }}/F97316" alt="{{ $tool['name'] }}" class="max-w-full max-h-full">
+                        </div>
+                        <span class="text-sm font-medium text-text">{{ $tool['name'] }}</span>
+                    </div>
+                @endforeach
                 <div class="glass rounded-xl p-5 flex flex-col items-center gap-3 text-center hover:-translate-y-1 hover:glow-orange transition">
                     <div class="w-10 h-10 flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.8" class="w-10 h-10">
